@@ -13,7 +13,7 @@ Essas variáveis públicas são usadas para armazenar o nome do usuário encontr
 
 Este método constrói uma consulta SQL para verificar se um usuário com um determinado login e senha existe no banco de dados. Há erros na construção da consulta SQL, falta de tratamento de exceção e falta de fechamento da conexão e recursos.
 
-## Principais Erros no Código
+## Primeiro Teste - Principais Erros no Código
 
 Aqui estão os principais erros no código que devem ser corrigidos:
 
@@ -28,4 +28,10 @@ Aqui estão os principais erros no código que devem ser corrigidos:
 
 4. **Erro de manipulação de conexão com o banco de dados**
    - A conexão com o banco de dados não é fechada após o uso, o que pode levar a vazamento de recursos. É importante fechar as conexões quando não são mais necessárias.
+
+  ## Segundo Teste - Documentação
+
+  **Este é um código todo documentado, para todos que pegarem o código e lerem, entenderem o funcionamento do código.
+
+   
 
