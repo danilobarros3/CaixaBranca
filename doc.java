@@ -8,14 +8,21 @@ import java.sql.Statement;
  */
 public class User {
     /**
-     * Nome do usuário.
+     * Variável para armazenar o nome do usuário
      */
     public String nome = "";
     /**
-     * Retorno variável para salvar o resultado da verificação
+     * Variável para armazenar o resultado da verificação
      */
     public boolean result = false;
 
+    /**
+     * Método para verificar um usuário no banco de dados.
+     *
+     * @param login O nome de usuário a ser verificado.
+     * @param senha A senha do usuário a ser verificada.
+     * @return Verdadeiro se o usuário for encontrado no banco de dados, falso caso contrário.
+     */
 
     /**
      * Estabelece conexão com o banco de dados
@@ -23,6 +30,7 @@ public class User {
      * @return o objeto de conexão do banco de dados.
      * @throws Exception mensagem de falha na conexão
      */
+    
     public Connection conectarBD(){
         Connection conn = null;
 
@@ -42,7 +50,7 @@ public class User {
         String sql = "";
         Connection conn = conectarBD(); // Instanciamento do Connection a partir da chamada de função conectarBD()
 
-        //INSTRUÇÃO SQL
+        //INSTRUÇÃO SQL para selecionar o nome do usuário com base no login e senha
         sql += "select nome from usuarios ";
         sql += "where login = " + "'" + login + "'";
         sql += " and senha = " + "'" + senha + "';";
